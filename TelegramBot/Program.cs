@@ -10,6 +10,7 @@ using Telegram.Bot.Args;
 using Telegram.Bot.Types.ReplyMarkups;
 using Telegram.Bot.Types;
 using System.Globalization;
+using System.Text;
 
 namespace TelegramBot
 {
@@ -85,6 +86,7 @@ namespace TelegramBot
 
             if (msg.Text != null)
             {
+                Console.OutputEncoding = Encoding.UTF8;
                 Console.WriteLine($"  {msg.From.FirstName}{msg.From.LastName} wrote : {msg.Text}  ");
             }
             switch (msg.Text)
